@@ -145,7 +145,7 @@ def gan(sample_size):
     tf.summary.scalar("Discriminator_Loss", disc_loss)
 
     if str(var0) == 'n':
-        logs_path = tempfile.gettempdir() + '\\mnist\\plot_1'
+        logs_path = str(os.path.join(tempfile.gettempdir(), 'mnist', 'plot_1'))
         os.makedirs(logs_path)
         print('store plots in directory: "' + logs_path + '"')
     else:
